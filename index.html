@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+
+<h1 class="pertama">Judul Satu</h1>
+<p>Writing regular AJAX code can be a bit tricky, because different browsers have different syntax for AJAX implementation. This means that you will have to write extra code to test for different browsers. However, the jQuery team has taken care of this for us, so that we can write AJAX functionality with only one single line of code.</p>
+
+<h1 class="kedua">Judul Satu</h1>
+<p>Writing regular AJAX code can be a bit tricky, because different browsers have different syntax for AJAX implementation. This means that you will have to write extra code to test for different browsers. However, the jQuery team has taken care of this for us, so that we can write AJAX functionality with only one single line of code.</p>
+<script>
+$(document).ready(function(){
+	$("h1.pertama").click(function(){
+		$(this).hide(1000);
+		});
+
+	$("p").click(function(){
+		$("h1").toggle();
+		});
+
+	$(document).keydown(function(a){
+		if(a.keyCode == 65){
+			$("h1").hide(1000);
+		}
+		if(a.keyCode == 66){
+			alert("Ini Tombol B");
+		}
+	});
+});
+</script>
+</body>
+</html>
